@@ -105,6 +105,8 @@ class WriteCommandHandle(CommandHandle):
         if is_success:
             self.m_processes[process_id].status_code = 200
             logging.info('Insertion success, {} items inserted'.format(insert_num))
+            #$ Trigger an Catalog Add Command
+
         else:
             self.m_processes[process_id].status_code = 400
             logging.info('Insertion failure, {} items inserted'.format(insert_num))
